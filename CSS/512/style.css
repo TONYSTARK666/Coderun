@@ -1,0 +1,120 @@
+:root {
+    --color-white: #ffffff;
+    --color-red: #ff5f00;
+    --color-brown: #9d7b29;
+    --color-orange: #ffc701;
+    --color-yellow: #fce300;
+    --color-black: #201b10;
+    --color-lightbrown: #faf4ce;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.pixel-art {
+    /*border: 1px solid red;*/
+    width: 512px;
+    height: 512px;
+    display: grid;
+    grid-template-columns: repeat(32, 16px);
+    grid-template-rows: repeat(32, 16px);
+    background-color: var(--color-white)
+}
+
+.pixel-heart {
+    display: grid;
+    grid-template-columns: repeat(5, 16px);
+    grid-template-rows: repeat(5, 16px);
+}
+
+.pixel-heart * {
+    background-color: var(--color-red);
+}
+
+.pixel-heart .pixel-row-1-1 {
+    background-color: var(--color-red);
+    grid-column: 2 / span 1;
+}
+
+.pixel-heart .pixel-row-1-2 {
+    background-color: var(--color-red);
+    grid-column: 4 / span 1;
+}
+
+.pixel-heart .pixel-row-2,
+.pixel-heart .pixel-row-3 {
+    grid-column: 1 / -1;
+}
+
+.pixel-heart .pixel-row-4 {
+    grid-column: 2 / span 3;
+}
+
+.pixel-heart .pixel-row-5 {
+    grid-column: 3 / span 1;
+}
+
+.pixel-heart-1 {
+    grid-column: -9;
+    grid-row: 2
+}
+
+.pixel-heart-2 {
+    grid-row: 8;
+    grid-column: -6;
+}
+
+.pixel-dragon-row-1 {
+    background-color: var(--color-brown);
+    grid-column: 19 / span 5;
+    grid-row: 9;
+}
+
+.grid-dragon-row-2 {
+    grid-column: 18 / span 8;
+    grid-row: 10;
+    display: grid;
+    grid-template-columns: repeat(8, 16px);
+}
+
+.grid-dragon-row-3 {
+    grid-column: 17 / span 10;
+    grid-row: 11;
+    display: grid;
+    grid-template-columns: repeat(10, 16px);
+}
+
+.grid-dragon-row-4 {
+    grid-column: 14 / span 14;
+    grid-row: 12;
+    display: grid;
+    grid-template-columns: repeat(14, 16px);
+}
+
+.grid-dragon-row-5 {
+    grid-column: 14 / span 15;
+    grid-row: 13;
+    display: grid;
+    grid-template-columns: repeat(15, 16px);
+}
+
+.grid-dragon-brown-pixel {
+    background-color: var(--color-brown);
+}
+
+.grid-dragon-dark-yellow-pixel {
+    background-color: var(--color-orange);
+}
+
+.grid-dragon-yellow-pixel {
+    background-color: var(--color-yellow);
+}
+
+.grid-dragon-black-pixel {
+    background-color: var(--color-black);
+}
